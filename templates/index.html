@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AAA</title>
+</head>
+<body>
+	<h2 style="text-align: center;">Diário do professor</h2>
+	<hr>{% for chave, valor in notas.items() %}
+		<details>
+			<summary>{{chave}}</summary>
+			<p>{{valor}}</p>
+		</details>
+		{% endfor %}
+		<form action="{{url_for('sobre')}}" method="POST">
+			<label>Aluno</label>
+			<input type="text" name="aluno" required="">
+			<label>Nota</label>
+			<input type="text" name="aluno" required="">
+		</form>
+	</hr>
+</body>
+</html>
